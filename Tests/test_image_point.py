@@ -17,6 +17,7 @@ def test_sanity():
         im.point(list(range(256)))
     im.point(lambda x: x * 1)
     im.point(lambda x: x + 1)
+    im.point(lambda x: x - 1)
     im.point(lambda x: x * 1 + 1)
     im.point(lambda x: 0.1 + 0.2 * x)
     im.point(lambda x: -x)
@@ -24,6 +25,7 @@ def test_sanity():
     im.point(lambda x: 1 - x / 2)
     im.point(lambda x: (2 + x) / 3)
     im.point(lambda x: 0.5)
+    im.point(lambda x: x / 1)
     with pytest.raises(TypeError):
         im.point(lambda x: x * x)
     with pytest.raises(TypeError):
