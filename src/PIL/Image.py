@@ -431,7 +431,9 @@ def _getencoder(mode, encoder_name, args, extra=()):
 
 
 def coerce_e(value):
+    deprecate("coerce_e", 10)
     return value if isinstance(value, _E) else _E(1, value)
+
 
 class _E:
     def __init__(self, scale, data):
