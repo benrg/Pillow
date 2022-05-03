@@ -32,6 +32,8 @@ def test_sanity():
     with pytest.raises(TypeError):
         im.point(lambda x: x * x)
     with pytest.raises(TypeError):
+        im.point(lambda x: x / x)
+    with pytest.raises(TypeError):
         im.point(lambda x: 1 / x)
     with pytest.raises(TypeError):
         im.point(lambda x: x // 2)
